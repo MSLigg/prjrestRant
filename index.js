@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
 
@@ -5,6 +6,8 @@ app.get('/', (req, res) => {
     res.send('Hello world!')
 })
 
-app.listen(3000)
+app.get('*', (req, res) => {
+    res.status(404).send('<h1>404 Page</h1>')
+})
 
-//adding for initial commit, tracking to see if it's working
+app.listen(process.env.PORT)
