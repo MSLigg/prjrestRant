@@ -4,7 +4,7 @@ function Def (html) {
     return (
         <html>
             <head>
-                <title>Title</title>
+                <title> Title </title>
             </head>
             <body>
                 {html.children}
@@ -14,7 +14,3 @@ function Def (html) {
 }
 
 module.exports = Def
-
-git add .
-git commit -m "Adding default view for layout"
-git push origin main
